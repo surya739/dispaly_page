@@ -15,6 +15,7 @@
             android:id="@+id/generss"
             android:layout_width="116dp"
             android:layout_height="40dp"
+            android:layout_marginStart="4dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/spinner_background"
             android:scrollbarSize="30dp"
@@ -44,6 +45,19 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
+
+        <LinearLayout
+            android:id="@+id/Slidedots"
+            android:layout_width="117dp"
+            android:layout_height="27dp"
+
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image" />
+
         <ImageView
             android:id="@+id/tickmark"
             android:layout_width="34dp"
@@ -53,9 +67,8 @@
             android:src="@drawable/tickmark"
             app:layout_constraintStart_toEndOf="@+id/price"
 
-            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintTop_toBottomOf="@+id/username"
             tools:ignore="MissingConstraints" />
-
 
         <ImageView
             android:id="@+id/tickmark1"
@@ -80,7 +93,20 @@
             android:textColor="#000000"
             android:textSize="20dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/image" />
+            app:layout_constraintTop_toBottomOf="@+id/Slidedots" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="251dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:text="  Surya "
+
+            android:textColor="#000000"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
 
         <TextView
             android:id="@+id/price"
@@ -96,7 +122,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.067"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title" />
+            app:layout_constraintTop_toBottomOf="@+id/username" />
 
 
         <TextView
@@ -148,29 +174,31 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/price" />
 
+
+
         <TextView
 
             android:id="@+id/description"
             android:layout_width="156dp"
             android:layout_height="30dp"
-            android:layout_marginTop="12dp"
-            android:text="  Highlights"
+            android:layout_marginTop="36dp"
 
+            android:text="  Highlights"
             android:textColor="#030303"
             android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.031"
+            app:layout_constraintHorizontal_bias="0.16"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/selllingpriceamount" />
+            app:layout_constraintTop_toBottomOf="@+id/calender" />
 
         <TextView
             android:id="@+id/about"
             android:layout_width="330dp"
             android:layout_height="91dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
             android:background="@drawable/rounded_cornerblack"
             android:text="anna kk vaa pathutuu solu bro"
-            android:layout_marginEnd="15dp"
-            android:layout_marginTop="15dp"
             android:textColor="#2c2c2c"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -179,6 +207,73 @@
             app:layout_constraintTop_toBottomOf="@+id/description"
             app:layout_constraintVertical_bias="0.14" />
 
+
+        <LinearLayout
+            android:layout_width="377dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/about">
+
+            <TextView
+                android:id="@+id/finalamountdetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹209 "
+                android:textColor="#FB3E3E"
+                android:textSize="20dp"
+                />
+            <TextView
+                android:id="@+id/finalamount1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/mo for "
+                android:textColor="#FB3E3E"
+                android:textSize="12dp"
+                />
+            <TextView
+                android:id="@+id/finalamount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24 months "
+                android:textColor="#27DEA1"
+                android:textSize="12dp"
+                />
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:text="Book your Item"
+                android:textSize="10dp"
+                android:background="@drawable/button_corner"
+               />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/calender"
+            android:layout_width="55dp"
+            android:background="@drawable/calender"
+            android:layout_height="43dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selllingpriceamount" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="189dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="24dp"
+            android:text="date"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/calender"
+            app:layout_constraintTop_toBottomOf="@+id/selllingpriceamount" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
