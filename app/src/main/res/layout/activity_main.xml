@@ -11,170 +11,180 @@
         android:layout_height="match_parent"
       >
 
-        <Spinner
-            android:id="@+id/generss"
-            android:layout_width="116dp"
+
+        <Button
+            android:id="@+id/per_day"
+            android:layout_width="110dp"
             android:layout_height="40dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="32dp"
             android:background="@drawable/spinner_background"
             android:scrollbarSize="30dp"
+            android:text="Per day"
             android:textAlignment="center"
-            app:layout_constraintStart_toEndOf="@+id/priceamount"
-            app:layout_constraintTop_toBottomOf="@+id/tickmark" />
 
-        <ImageView
-            android:id="@+id/greentick"
-            android:layout_width="53dp"
-            android:layout_height="43dp"
-            android:background="@drawable/backk"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.054"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/dayamount" />
+
+        <Button
+            android:id="@+id/per_week"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/spinner_background"
+            android:scrollbarSize="30dp"
+            android:text="Per week"
+            android:textAlignment="center"
+            android:textSize="10dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/per_month"
+            app:layout_constraintHorizontal_bias="0.095"
+            app:layout_constraintStart_toEndOf="@+id/per_day"
+            app:layout_constraintTop_toBottomOf="@+id/dayamount" />
+
+        <Button
+            android:id="@+id/per_month"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/spinner_background"
+            android:scrollbarSize="30dp"
+            android:text="Per Month"
+            android:textAlignment="center"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.806"
+            app:layout_constraintStart_toEndOf="@+id/per_week"
+            app:layout_constraintTop_toBottomOf="@+id/dayamount" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="408dp"
+            android:layout_height="46dp"
+
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/backbutton"
+                android:layout_marginStart="15dp"
+                android:layout_width="46dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/backk"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/image"
-            android:layout_width="396dp"
-            android:layout_height="337dp"
+            android:layout_width="397dp"
+            android:layout_height="324dp"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="50dp"
             android:layout_marginEnd="5dp"
+            android:foregroundGravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
 
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.0" />
 
         <LinearLayout
             android:id="@+id/Slidedots"
-            android:layout_width="117dp"
-            android:layout_height="27dp"
+            android:layout_width="409dp"
+            android:layout_height="38dp"
 
-            android:layout_marginTop="8dp"
             android:gravity="center"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image" />
 
-        <ImageView
-            android:id="@+id/tickmark"
-            android:layout_width="34dp"
-            android:layout_height="31dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
-            android:src="@drawable/tickmark"
-            app:layout_constraintStart_toEndOf="@+id/price"
-
-            app:layout_constraintTop_toBottomOf="@+id/username"
-            tools:ignore="MissingConstraints" />
-
-        <ImageView
-            android:id="@+id/tickmark1"
-            android:layout_width="34dp"
-            android:layout_height="35dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/pinktick"
-
-            app:layout_constraintStart_toEndOf="@+id/Sellingprice"
-            app:layout_constraintTop_toBottomOf="@+id/generss"
-            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/title"
-            android:layout_width="263dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="28dp"
-
-            android:text="  Samsung Strom smart TV "
+            android:layout_width="169dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+            android:text="Samsung Strom smart TV "
             android:textColor="#000000"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Slidedots" />
+
+
+        <TextView
+            android:id="@+id/dayamount"
+            android:layout_width="164dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="104dp"
+
+            android:text="  choice of days "
+            android:textColor="#828080"
             android:textSize="20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Slidedots" />
 
         <TextView
-            android:id="@+id/username"
-            android:layout_width="251dp"
-            android:layout_height="47dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="20dp"
-            android:text="  Surya "
+            android:id="@+id/selllingprice"
+            android:layout_width="144dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="36dp"
 
+            android:text="  Selling Price"
             android:textColor="#000000"
-            android:textSize="20dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title" />
+            android:textSize="18dp"
 
-        <TextView
-            android:id="@+id/price"
-            android:layout_width="122dp"
-            android:layout_height="31dp"
-            android:layout_marginTop="12dp"
-            android:text="price"
-
-            android:background="@drawable/rounded_corner"
-            android:textAlignment="center"
-            android:textColor="#285204"
-            android:textSize="15dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.067"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/username" />
 
+            app:layout_constraintHorizontal_bias="0.016"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/per_day" />
 
         <TextView
             android:id="@+id/selllingpriceamount"
             android:layout_width="144dp"
             android:layout_height="40dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="36dp"
+
             android:text="  ₹19999"
-
             android:textColor="#000000"
-            android:textSize="25dp"
+            android:textSize="20dp"
+
             app:layout_constraintEnd_toEndOf="parent"
 
-            app:layout_constraintHorizontal_bias="0.0"
-
+            app:layout_constraintHorizontal_bias="0.995"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Sellingprice" />
+            app:layout_constraintTop_toBottomOf="@+id/per_month" />
 
-        <TextView
-            android:id="@+id/Sellingprice"
-            android:layout_width="131dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/border_corner"
-            android:text="Selling price"
-            android:textAlignment="center"
-            android:textColor="#68097B"
-            android:textSize="18dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.07"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/priceamount" />
 
         <TextView
             android:id="@+id/priceamount"
-            android:layout_width="144dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="12dp"
-            android:text="  ₹1100"
+            android:layout_width="123dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="28dp"
 
+            android:text="1100"
             android:textColor="#000000"
             android:textSize="20dp"
+
             app:layout_constraintEnd_toEndOf="parent"
-
-            app:layout_constraintHorizontal_bias="0.0"
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/price" />
-
-
+            app:layout_constraintHorizontal_bias="0.718"
+            app:layout_constraintStart_toEndOf="@+id/title"
+            app:layout_constraintTop_toBottomOf="@+id/Slidedots" />
 
         <TextView
 
@@ -183,13 +193,14 @@
             android:layout_height="30dp"
             android:layout_marginTop="36dp"
 
-            android:text="  Highlights"
-            android:textColor="#030303"
+            android:text="  Product Details"
+            android:textColor="#656161"
             android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.16"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/calender" />
+
 
         <TextView
             android:id="@+id/about"
@@ -199,18 +210,17 @@
             android:layout_marginEnd="15dp"
             android:background="@drawable/rounded_cornerblack"
             android:text="anna kk vaa pathutuu solu bro"
-            android:textColor="#2c2c2c"
+            android:textColor="#656161"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.448"
+            app:layout_constraintHorizontal_bias="0.606"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/description"
-            app:layout_constraintVertical_bias="0.14" />
-
+            app:layout_constraintVertical_bias="0.0" />
 
         <LinearLayout
-            android:layout_width="377dp"
-            android:layout_height="35dp"
+            android:layout_width="363dp"
+            android:layout_height="44dp"
             android:layout_marginTop="20dp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -224,43 +234,42 @@
                 android:layout_height="wrap_content"
                 android:text="₹209 "
                 android:textColor="#FB3E3E"
-                android:textSize="20dp"
-                />
+                android:textSize="20dp" />
+
             <TextView
                 android:id="@+id/finalamount1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="/mo for "
                 android:textColor="#FB3E3E"
-                android:textSize="12dp"
-                />
+                android:textSize="12dp" />
+
             <TextView
                 android:id="@+id/finalamount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="24 months "
                 android:textColor="#27DEA1"
-                android:textSize="12dp"
-                />
+                android:textSize="12dp" />
 
             <Button
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="70dp"
-                android:text="Book your Item"
-                android:textSize="10dp"
                 android:background="@drawable/button_corner"
-               />
+                android:text="Book your Item"
+                android:textColor="#FFFFFF"
+                android:textSize="10dp" />
 
         </LinearLayout>
 
         <ImageView
             android:id="@+id/calender"
-            android:layout_width="55dp"
-            android:background="@drawable/calender"
+            android:layout_width="49dp"
             android:layout_height="43dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="20dp"
+            android:background="@drawable/calender"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/selllingpriceamount" />
 
@@ -274,6 +283,8 @@
             android:textAlignment="center"
             app:layout_constraintStart_toEndOf="@+id/calender"
             app:layout_constraintTop_toBottomOf="@+id/selllingpriceamount" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

@@ -1,3 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">display_page</string>
+
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- to hide white screen in start of window -->
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <string name="AppTheme">s</string>
 </resources>
